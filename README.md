@@ -118,6 +118,10 @@ We plan to open up the contribution process in the future and will provide guide
 
 Thank you for your understanding and support!
 
+## Acknowledgments
+
+* This software is based on results obtained from a project, JPNP21029, subsidized by the New Energy and Industrial Technology Development Organization (NEDO).
+
 ## License
 
 [Apache License 2.0][]
