@@ -130,14 +130,14 @@ Thank you for your understanding and support!
 
 [DIG]: https://unit.aist.go.jp/pprc/gdc/english/information/DIG/index.html
 
-[Getting Started]: https://github.com/project-cdim/docs/getting-started/en
-[Getting Started ja]: https://github.com/project-cdim/docs/getting-started/ja
-[Tutorial]: https://github.com/project-cdim/docs/tutorial/en
-[Tutorial ja]: https://github.com/project-cdim/docs/tutorial/ja
+[Getting Started]: https://github.com/project-cdim/docs/blob/main/getting-started/en/README.md
+[Getting Started ja]: https://github.com/project-cdim/docs/blob/main/getting-started/ja/README.md
+[Tutorial]: https://github.com/project-cdim/docs/blob/main/tutorial/en/README.md
+[Tutorial ja]: https://github.com/project-cdim/docs/blob/main/tutorial/ja/README.md
 [Documents]: https://github.com/project-cdim/docs
 
-[Concepts]: https://github.com/project-cdim/docs/concepts/en#architecture
-[Concepts ja]: https://github.com/project-cdim/docs/concepts/ja#architecture
+[Concepts]: https://github.com/project-cdim/docs/blob/main/concepts/en/README.md#architecture
+[Concepts ja]: https://github.com/project-cdim/docs/blob/main/concepts/ja/README.md#アーキテクチャ
 
 [base-compose]: https://github.com/project-cdim/base-compose
 
