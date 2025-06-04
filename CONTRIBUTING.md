@@ -1,7 +1,7 @@
 # Contributing
 
-We appreciate your interest in contributing to our project! However, please note that we are currently in the early stages of development and are not accepting external contributions at this time.
+Thank you for your interest in contributing to our project! We're currently in the early stages of development, and therefore, we are not accepting external contributions at this time.
 
-We plan to open up the contribution process in the future and will provide guidelines on how to contribute effectively once we are ready. 
+We look forward to opening up our contribution process in the future. Once we are ready, we will provide detailed guidelines on how you can contribute effectively.
 
-Thank you for your understanding and support!
+We appreciate your understanding and support!

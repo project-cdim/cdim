@@ -1,122 +1,121 @@
 # Composable Disaggregated Infrastructure Manager
 
-In recent years, hardware that allows for the dynamic reconfiguration of connections between servers (CPU nodes) and devices such as Memory (CXL Memory), GPUs, FPGAs, and NVMe SSDs via PCI Express/CXL switches—known as Composable Disaggregated Infrastructure (hereinafter referred to as CDI)—has begun to be released by various hardware vendors.
+In recent years, hardware vendors have started releasing hardware capable of dynamically reconfiguring connections between servers (CPU nodes) and devices such as CXL Memory, GPUs, FPGAs, and NVMe SSDs via PCI Express/CXL switches, known collectively as Composable Disaggregated Infrastructure (CDI).
 
-Composable Disaggregated Infrastructure Manager (hereinafter referred to as CDIM) is a open-source common management platform for CDI. It provides for the following features:
+Composable Disaggregated Infrastructure Manager (CDIM) is an open-source management platform specifically for CDI. CDIM offers these features:
 
-* Plugin mechanism that absorbs the control interface differences of CDIs for each hardware vendor.  
-* Bulk configuration changes of the CDI based on the overall system design input.
-* Performance monitoring of hardware resources (CPU, GPUs, etc.).
+* A plugin mechanism to handle differences in the control interfaces among various hardware vendors.
+* Bulk configuration changes based on comprehensive system design inputs.
+* Performance monitoring for hardware resources like CPUs and GPUs.
 
-To control hardware using CDIM, a compatible plugin is required. As a reference implementation, a hardware emulator and plugin compliant with the [Developer's Interface Guide for Green Datacenter Architecture-based Computing Environment][DIG] are being provided.
+To utilize CDIM for hardware control, a compatible plugin is necessary. As a reference, we provide [hw-emulator-reference][], [fm-plugin-reference][] and [oob-plugin-reference][] compliant with the [Developer's Interface Guide for Green Datacenter Architecture-based Computing Environment][DIG].
 
 ## Documents
 
-To get started with CDIM and learn the fundamentals, please refer to the following:
+To begin using CDIM and understand its fundamentals, refer to the following documents:
 
-* Getting started
+* **Getting Started**
   * [English][Getting Started]
   * [Japanese][Getting Started ja]
-* Tutorial
+* **Tutorial**
   * [English][Tutorial]
   * [Japanese][Tutorial ja]
 
-For comprehensive information and guidance on maximizing your CDIM experience, including details on all aspects of the platform, please consult our official documentation:
+For complete information on utilizing CDIM effectively, consult our full documentation:
 
 * [Documents][]
 
+## Service Components
 
-## Service components
+For details on how each project/service interrelates, see the Concepts section:
 
-For more information about the relationship between each project/service, see Concepts.
-
-* Concepts
+* **Concepts**
   * [English][Concepts]
   * [Japanese][Concepts ja]
 
-### Base services
+### Base Services
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| Compose recipe only | [base-compose][] |
+| Source Code Repository | Compose Recipe Repository |
+|-----------------------|--------------------------|
+| Compose recipe only   | [base-compose][]         |
 
-### Frontend services
+### Frontend Services
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| [mf-core][] | Same as left |
-| [mf-resource][] | Same as left |
-| [mf-layout][] | Same as left |
-| [mf-user][] | Same as left |
-| [mf-shared-modules][] | Same as left |
+| Source Code Repository | Compose Recipe Repository |
+|------------------------|--------------------------|
+| [mf-core][]            | Same as left             |
+| [mf-resource][]        | Same as left             |
+| [mf-layout][]          | Same as left             |
+| [mf-user][]            | Same as left             |
+| [mf-shared-modules][]  | Same as left             |
 
-### Backend services
+### Backend Services
 
-#### Configuration management services
+#### Configuration Management Services
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| [configuration-manager][] | [configuration-manager-compose][] |
+| Source Code Repository    | Compose Recipe Repository            |
+|---------------------------|-------------------------------------|
+| [configuration-manager][] | [configuration-manager-compose][]    |
 | [configuration-collector][] | [configuration-collector-compose][] |
-| [configuration-exporter][] | [configuration-exporter-compose][] |
+| [configuration-exporter][] | [configuration-exporter-compose][]   |
 
-#### Layout apply services
+#### Layout Apply Services
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| [layout-apply][] | [layout-apply-compose][] |
-| [migration-procedure-generator][] | [migration-procedure-generator-compose][] |
+| Source Code Repository         | Compose Recipe Repository                   |
+|--------------------------------|--------------------------------------------|
+| [layout-apply][]               | [layout-apply-compose][]                    |
+| [migration-procedure-generator][] | [migration-procedure-generator-compose][]  |
 
-#### Performance management services
+#### Performance Management Services
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| Compose recipe only | [performance-manager-compose][] |
-| [performance-collector][] | [performance-collector-compose][] |
-| [performance-exporter][] | [performance-exporter-compose][] |
+| Source Code Repository       | Compose Recipe Repository                 |
+|------------------------------|------------------------------------------|
+| Compose recipe only          | [performance-manager-compose][]           |
+| [performance-collector][]    | [performance-collector-compose][]         |
+| [performance-exporter][]     | [performance-exporter-compose][]          |
 
-#### Hardware control services
+#### Hardware Control Services
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| [hw-control][] | [hw-control-compose][] |
+| Source Code Repository | Compose Recipe Repository |
+|------------------------|---------------------------|
+| [hw-control][]         | [hw-control-compose][]    |
 
-##### Reference hardware plugins
+##### Reference Hardware Plugins
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| [fm-plugin-reference][] | - |
-| [oob-plugin-reference][] | - |
+| Source Code Repository    | Compose Recipe Repository |
+|---------------------------|---------------------------|
+| [fm-plugin-reference][]   | -                         |
+| [oob-plugin-reference][]  | -                         |
 
-### Reference hardware emulator
+### Reference Hardware Emulator
 
-| Source code repository | Compose recipe repository |
-|--|--|
-| [hw-emulator-reference][] | [hw-emulator-reference-compose][] |
+| Source Code Repository       | Compose Recipe Repository             |
+|------------------------------|---------------------------------------|
+| [hw-emulator-reference][]    | [hw-emulator-reference-compose][]     |
 
 ## Miscellaneous
 
 ### Installer
 
-| Repository | Description |
-|--|--|
-| [installer][] | Installer for CDIM |
-| [set-up-tools][] | Toolset for executing integration settings such as Kong |
+| Repository    | Description                                         |
+|---------------|-----------------------------------------------------|
+| [installer][] | CDIM Installer                                      |
+| [set-up-tools][] | Tools for integration settings such as Kong       |
 
-### Logger library
+### Logger Library
 
-| Repository | Description |
-|--|--|
-| [cdim-go-logger][] | CDIM's logger library for Go |
-| [cdim-python-logger][] | CDIM's logger library for python |
+| Repository          | Description                               |
+|---------------------|-------------------------------------------|
+| [cdim-go-logger][]  | CDIM's logger library for Go              |
+| [cdim-python-logger][] | CDIM's logger library for Python        |
 
 ## Contributing
 
-We appreciate your interest in contributing to our project! However, please note that we are currently in the early stages of development and are not accepting external contributions at this time.
+Thank you for your interest in contributing to our project! We're currently in the early stages of development, and therefore, we are not accepting external contributions at this time.
 
-We plan to open up the contribution process in the future and will provide guidelines on how to contribute effectively once we are ready. 
+We look forward to opening up our contribution process in the future. Once we are ready, we will provide detailed guidelines on how you can contribute effectively.
 
-Thank you for your understanding and support!
+We appreciate your understanding and support!
 
 ## Acknowledgments
 
