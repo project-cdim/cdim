@@ -56,7 +56,6 @@ For details on how each project/service interrelates, see the Concepts section:
 | Source Code Repository    | Compose Recipe Repository            |
 |---------------------------|-------------------------------------|
 | [configuration-manager][] | [configuration-manager-compose][]    |
-| [configuration-collector][] | [configuration-collector-compose][] |
 | [configuration-exporter][] | [configuration-exporter-compose][]   |
 
 #### Layout Apply Services
@@ -73,6 +72,18 @@ For details on how each project/service interrelates, see the Concepts section:
 | Compose recipe only          | [performance-manager-compose][]           |
 | [performance-collector][]    | [performance-collector-compose][]         |
 | [performance-exporter][]     | [performance-exporter-compose][]          |
+
+#### Alert Management Services
+
+| Source Code Repository       | Compose Recipe Repository                 |
+|------------------------------|------------------------------------------|
+| Compose recipe only          | [alert-manager-compose][]           |
+
+#### Job Management Services
+
+| Source Code Repository       | Compose Recipe Repository                 |
+|------------------------------|------------------------------------------|
+| Compose recipe only          | [job-manager-compose][]           |
 
 #### Hardware Control Services
 
@@ -107,7 +118,6 @@ For details on how each project/service interrelates, see the Concepts section:
 | Repository          | Description                               |
 |---------------------|-------------------------------------------|
 | [cdim-go-logger][]  | CDIM's logger library for Go              |
-| [cdim-python-logger][] | CDIM's logger library for Python        |
 
 ## Contributing
 
@@ -147,11 +157,12 @@ We appreciate your understanding and support!
 [mf-shared-modules]: https://github.com/project-cdim/mf-shared-modules
 
 [configuration-manager]: https://github.com/project-cdim/configuration-manager
-[configuration-collector]: https://github.com/project-cdim/configuration-collector
 [configuration-exporter]: https://github.com/project-cdim/configuration-exporter
 [configuration-manager-compose]: https://github.com/project-cdim/configuration-manager-compose
-[configuration-collector-compose]: https://github.com/project-cdim/configuration-collector-compose
 [configuration-exporter-compose]: https://github.com/project-cdim/configuration-exporter-compose
+
+[job-manager-compose]: https;//github.com/project-cdim/job-manager-compose
+[alert-manager-compose]: https://github.com/project-cdim/alert-manager-compose
 
 [layout-apply]: https://github.com/project-cdim/layout-apply
 [migration-procedure-generator]: https://github.com/project-cdim/migration-procedure-generator
