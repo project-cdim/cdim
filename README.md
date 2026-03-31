@@ -36,88 +36,97 @@ For details on how each project/service interrelates, see the Concepts section:
 ### Base Services
 
 | Source Code Repository | Compose Recipe Repository |
-|-----------------------|--------------------------|
-| Compose recipe only   | [base-compose][]         |
+| ---------------------- | ------------------------- |
+| Compose recipe only    | [base-compose][]          |
 
 ### Frontend Services
 
 | Source Code Repository | Compose Recipe Repository |
-|------------------------|--------------------------|
-| [mf-core][]            | Same as left             |
-| [mf-resource][]        | Same as left             |
-| [mf-layout][]          | Same as left             |
-| [mf-user][]            | Same as left             |
-| [mf-shared-modules][]  | Same as left             |
+| ---------------------- | ------------------------- |
+| [mf-core][]            | Same as left              |
+| [mf-resource][]        | Same as left              |
+| [mf-layout][]          | Same as left              |
+| [mf-user][]            | Same as left              |
+| [mf-alert][]           | Same as left              |
+| [mf-shared-modules][]  | Same as left              |
 
 ### Backend Services
 
 #### Configuration Management Services
 
-| Source Code Repository    | Compose Recipe Repository            |
-|---------------------------|-------------------------------------|
-| [configuration-manager][] | [configuration-manager-compose][]    |
-| [configuration-exporter][] | [configuration-exporter-compose][]   |
+| Source Code Repository     | Compose Recipe Repository          |
+| -------------------------- | ---------------------------------- |
+| [configuration-manager][]  | [configuration-manager-compose][]  |
+| [configuration-exporter][] | [configuration-exporter-compose][] |
 
-#### Layout Apply Services
+#### Layout Design and Apply Services
 
-| Source Code Repository         | Compose Recipe Repository                   |
-|--------------------------------|--------------------------------------------|
-| [layout-apply][]               | [layout-apply-compose][]                    |
-| [migration-procedure-generator][] | [migration-procedure-generator-compose][]  |
+| Source Code Repository            | Compose Recipe Repository                 |
+| --------------------------------- | ----------------------------------------- |
+| [layout-design][]                 | [layout-design-compose][]                 |
+| [policy-manager][]                | [policy-manager-compose][]                |
+| [layout-apply][]                  | [layout-apply-compose][]                  |
+| [migration-procedure-generator][] | [migration-procedure-generator-compose][] |
+
+#### Layout Design Engine Plugin Sample
+
+| Source Code Repository          | Compose Recipe Repository |
+| ------------------------------- | ------------------------- |
+| [sample-design-engine-plugin][] | -                         |
 
 #### Performance Management Services
 
-| Source Code Repository       | Compose Recipe Repository                 |
-|------------------------------|------------------------------------------|
-| Compose recipe only          | [performance-manager-compose][]           |
-| [performance-collector][]    | [performance-collector-compose][]         |
-| [performance-exporter][]     | [performance-exporter-compose][]          |
+| Source Code Repository    | Compose Recipe Repository         |
+| ------------------------- | --------------------------------- |
+| Compose recipe only       | [performance-manager-compose][]   |
+| [performance-collector][] | [performance-collector-compose][] |
+| [performance-exporter][]  | [performance-exporter-compose][]  |
 
 #### Alert Management Services
 
-| Source Code Repository       | Compose Recipe Repository                 |
-|------------------------------|------------------------------------------|
-| Compose recipe only          | [alert-manager-compose][]           |
+| Source Code Repository | Compose Recipe Repository |
+| ---------------------- | ------------------------- |
+| Compose recipe only    | [alert-manager-compose][] |
 
 #### Job Management Services
 
-| Source Code Repository       | Compose Recipe Repository                 |
-|------------------------------|------------------------------------------|
-| Compose recipe only          | [job-manager-compose][]           |
+| Source Code Repository | Compose Recipe Repository |
+| ---------------------- | ------------------------- |
+| Compose recipe only    | [job-manager-compose][]   |
 
 #### Hardware Control Services
 
 | Source Code Repository | Compose Recipe Repository |
-|------------------------|---------------------------|
+| ---------------------- | ------------------------- |
 | [hw-control][]         | [hw-control-compose][]    |
 
 ##### Reference Hardware Plugins
 
-| Source Code Repository    | Compose Recipe Repository |
-|---------------------------|---------------------------|
-| [fm-plugin-reference][]   | -                         |
-| [oob-plugin-reference][]  | -                         |
+| Source Code Repository   | Compose Recipe Repository |
+| ------------------------ | ------------------------- |
+| [fm-plugin-reference][]  | -                         |
+| [oob-plugin-reference][] | -                         |
 
 ### Reference Hardware Emulator
 
-| Source Code Repository       | Compose Recipe Repository             |
-|------------------------------|---------------------------------------|
-| [hw-emulator-reference][]    | [hw-emulator-reference-compose][]     |
+| Source Code Repository    | Compose Recipe Repository         |
+| ------------------------- | --------------------------------- |
+| [hw-emulator-reference][] | [hw-emulator-reference-compose][] |
 
 ## Miscellaneous
 
 ### Installer
 
-| Repository    | Description                                         |
-|---------------|-----------------------------------------------------|
-| [installer][] | CDIM Installer                                      |
-| [set-up-tools][] | Tools for integration settings such as Kong       |
+| Repository       | Description                                 |
+| ---------------- | ------------------------------------------- |
+| [installer][]    | CDIM Installer                              |
+| [set-up-tools][] | Tools for integration settings such as Kong |
 
 ### Logger Library
 
-| Repository          | Description                               |
-|---------------------|-------------------------------------------|
-| [cdim-go-logger][]  | CDIM's logger library for Go              |
+| Repository         | Description                  |
+| ------------------ | ---------------------------- |
+| [cdim-go-logger][] | CDIM's logger library for Go |
 
 ## Contributing
 
@@ -154,6 +163,7 @@ We appreciate your understanding and support!
 [mf-resource]: https://github.com/project-cdim/mf-resource
 [mf-layout]: https://github.com/project-cdim/mf-layout
 [mf-user]: https://github.com/project-cdim/mf-user
+[mf-alert]: https://github.com/project-cdim/mf-alert
 [mf-shared-modules]: https://github.com/project-cdim/mf-shared-modules
 
 [configuration-manager]: https://github.com/project-cdim/configuration-manager
@@ -164,10 +174,16 @@ We appreciate your understanding and support!
 [job-manager-compose]: https;//github.com/project-cdim/job-manager-compose
 [alert-manager-compose]: https://github.com/project-cdim/alert-manager-compose
 
+[layout-design]: https://github.com/project-cdim/layout-design
+[policy-manager]: https://github.com/project-cdim/policy-manager
 [layout-apply]: https://github.com/project-cdim/layout-apply
 [migration-procedure-generator]: https://github.com/project-cdim/migration-procedure-generator
+[layout-design-compose]: https://github.com/project-cdim/layout-design-compose
+[policy-manager-compose]: https://github.com/project-cdim/policy-manager-compose
 [layout-apply-compose]: https://github.com/project-cdim/layout-apply-compose
 [migration-procedure-generator-compose]: https://github.com/project-cdim/migration-procedure-generator-compose
+
+[sample-design-engine-plugin]: https://github.com/project-cdim/sample-design-engine-plugin
 
 [performance-collector]: https://github.com/project-cdim/performance-collector
 [performance-exporter]: https://github.com/project-cdim/performance-exporter
